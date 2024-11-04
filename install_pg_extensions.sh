@@ -24,9 +24,10 @@ for EXTENSION in ${EXTENSIONS}; do
         apt-get update
         apt-get install --yes \
             timescaledb-tools \
-            timescaledb-toolkit-postgresql-${PG_MAJOR} \
             timescaledb-2-loader-postgresql-${PG_MAJOR} \
             timescaledb-2-${TIMESCALEDB_VERSION}-postgresql-${PG_MAJOR}
+            # timescaledb-toolkit-postgresql-${PG_MAJOR} \
+            
 
         # cleanup
         apt-get remove apt-transport-https lsb-release wget --auto-remove -y
